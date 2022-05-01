@@ -16,15 +16,12 @@ html, body{
     background-color:lightsteelblue;
    
 }
-ul li{
-    list-style-type: none;
-    display:inline;
-    padding: 2px;
-}
+
+
 ul{
-   text-align: left;
-   /* padding-right: 2px; */
-   padding-top:35px
+    text-align: right;
+    padding: 2px;
+    margin-top: 30px;
 }
 
 ul li a{
@@ -33,7 +30,7 @@ ul li a{
     font-family:Gill sans;
 }
 a:hover{
-    color:darkblue;
+    color:white;
     background-color:unset;
 }
 .cutom-container{
@@ -46,12 +43,9 @@ a:hover{
     font-style: italic;
 }
 .koye{
-   margin:auto
+    border-radius: 0;
+    float: right;
 }
-.speech{
-    text-overflow: ellipsis;
-}
-
 #text-wra{
     color:grey;
     font-style:oblique;
@@ -78,9 +72,7 @@ a:hover{
 #footer-link a{
     padding:4px;
 }
-#footer3{
-    display: none;
-}
+
 #footer3 a{
     display: block;
     color:black;
@@ -95,18 +87,17 @@ a:hover{
 }
 p{
     font-weight: 300;
-    font-family:'Gill Sans'; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: normal;
     font-size: 30px;
 }
 #footer3 a{
     font-size: 25px;
-    display: block;
-    text-decoration: none;
    
 }
+
 #footer3 a:hover{
-    color:white;
+    color:darkblue;
     font-size: 28px;
 }
 #footer-svg a{
@@ -129,19 +120,21 @@ p{
 }
 
 #gallery-images a{
-    /* border: 2px solid; */
+    border: 2px solid;
     border-radius: 10px;
     margin: 10px;
     background-color:midnightblue;
     color: white;
     width:50%;
     text-decoration: none;
+    /* padding-left: 10px; */
+    position:relative;
+    left:60px;
     text-align:center;
     font-size:27px
 }
 #gallery-images a:hover{
-    background-color:rgb(43, 165, 206);
-    transition-duration: 0.7s;
+    background-color:grey;
 }
 
 /* ggds */
@@ -157,72 +150,16 @@ p{
 #admi-image{
     float: right;
 }
-.form-wrapper{
-    background-color:#009688;
-    margin:80px;
-    justify-content: space-between;
-}
-form input[type="radio"]{
-    margin:0;
-    color:blue;
-    width:50px;
-}
-
 .js1{
-    /* border:1px solid; */
+    border:1px solid;
     background-color: blue;
     color: white;
-
-    border-radius: 10px;
+    padding: 4px;
+    margin:5px;
     text-decoration:none;
-    float: left;
 }
 .js1:hover{
     background-color:red;
     color: white;
     text-decoration: none;
-    transition-duration: 0.5s;
-}
-form{
-    color:#FFFFFF;
-    
-}
-form ul{
-    list-style: none;
-    margin-left:290px;
-}
-form ul li{
-    display: block;
-}
-label{
-    padding-left: 0px;
-}
-form ul li label input{
-    margin:10px;
-    width:500px;
-    
-} 
-
-.child, .parent{
-    padding: 30px;
-    text-align: center;
-    color:#FFFFFF
-}
-hr{
-    width:600px;
-    background-color:#000000;
-}
-.submitbtn{
-    border:none;
-    width:80px;
-    background-color:#000050 ;
-    text-align: center;
-    margin:50px 0px 20px 300px;
-    color:white;
-}
-.submitbtn:hover{
-    background-color: #1B20AF;
-    color:white;
-    /* border-radius: 40%; */
-    transition-duration: 1s;
 }
