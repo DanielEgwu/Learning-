@@ -1,0 +1,79 @@
+.dan{
+    position: sticky;
+    top:0%;
+    background: white;
+}
+
+a:hover{
+    color: crimson;
+    margin-left: 10px;
+}
+a{
+    padding-left:90px;
+    text-decoration: none;
+    text-shadow: 2px;
+    font-style: oblique;
+}
+
+h2{
+    text-align: center;
+    color:darkslategrey;
+    font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: plum;
+}
+
+h3{
+    font-style: oblique;
+}
+h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.dat{
+    background: black;
+    color: beige;
+    text-align: center;
+}
+
+
+.erf{
+    background: darkcyan;
+}
+.wery{
+    color: darkcyan;
+    background: pink;
+}
+.ert{
+    color: black;
+    background: whitesmoke;
+    padding-top: 60px;
+}
+.brt{
+    color:darkblue;
+    background-color: bisque;
+}
+.pot{
+    background: lightgoldenrodyellow;
+    
+}
+.rot{
+    text-align: left;
+    font-size: 30px;
+}
+form{
+    color:mediumblue
+}
+#vf{
+    background: darkgreen;
+}
+
+
+
+
+
+
+
+
+
+    
+  
