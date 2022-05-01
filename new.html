@@ -1,29 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" 
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        div {
+            background: black;
+            border: 8px solid grey;
+            margin: auto;
+            width: 230px;
+            padding: 5px;
+            margin-top: 50px;
+        }
+
+        .grey {
+            border-radius: 50%;
+            background: grey;
+            width: 200px;
+            height: 200px;
+            display: grid;
+            margin-left: 20px;
+        }
+
+        .space {
+            color: white;
+            font-size: 80px;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        hr {
+            width: 220px;
+            /* height: 1px; */
+            padding-right: 10px;
+            background: grey;
+        }
+    </style>
 </head>
-  <body>
-    <div class="container-fluid">
-        <div class="first-header">
-           <p>+2349070766265  info@globalintschools.com</p>
-        </div>
+
+<body>
+    <div>
+
+        <p id="red" class="grey">
+            <span class="space"></span>
+        </p>
+        <hr>
+        <p id="yellow" class="grey"></p>
+        <hr>
+        <p id="green" class="grey"><span class="space"></span></p>
+
+    </div>
+
+
+
+    <script>
+
+        var redLight = document.querySelector("#red");
+        var yellowLight = document.querySelector("#yellow");
+        var greenLight = document.querySelector("#green");
+        redLight.style.background = "red";
+        var wait = 3;
+        var counter = 10;
+        setInterval(function () {
+            if (redLight.style.background == "red") {
+                if (wait <= 0) {
+                    showCounter(red, counter);
+                    if (counter <= 0) {
+                        redLight.style.background = "grey";
+                        yellowLight.style.background = "yellow";
+                        wait = 3;
+                        removeCounter(red);
+                    }
+                    counter--;
+                }
+                wait--;
+            }
+
+            if (yellowLight.style.background == "yellow") {
+                if (wait <= 0) {
+                    yellowLight.style.background = "grey";
+                    greenLight.style.background = "green";
+                    wait = 4;
+                    counter = 10;
+
+                }
+                wait--;
+            }
+
+            if (greenLight.style.background == "green") {
+                if (wait <= 0) {
+                    showCounter(green, counter);
+                    if (counter <= 0) {
+                        greenLight.style.background = "grey";
+                        redLight.style.background = "red";
+                        counter = 10;
+                        wait = 3;
+                        removeCounter(green);
+                    }
+                    counter--;
+                }
+                wait--;
+            }
+        }, 1000);
+
+        function showCounter(element, counter) {
+            element.getElementsByClassName('space')[0].innerHTML = counter;
+
+        }
+
+        function removeCounter(element) {
+            console.log(element.getElementsByClassName("space")[0])
+            element.getElementsByClassName('space')[0].innerHTML = "";
+        }
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" 
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
-  crossorigin="anonymous"></script>
- </body>
+
+
+
+    </script>
+</body>
+
 </html>

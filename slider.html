@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* background: url(ccn4.jpg); */
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            background-size: cover;
+            object-fit: fill;
+            margin-top: 40px;
+        }
+
+        #prev,
+        #next {
+            /* margin-top: 190px; */
+            color: blue;
+            background-color: black;
+            border: unset;
+            text-align: right;
+            padding: 10px;
+            margin: 2px;
+        }
+
+        #text {
+            font-size: 30px;
+            text-align: center;
+            padding-top: 400px;
+            /* justify-content:    ; */
+            color: blue;
+            animation: ease-in;
+            animation-duration: 2s;
+            transition-property:inherit;
+            transition-duration: 3s;
+
+        }
+        #textsec{
+            font-size: 30px;
+            text-align: center;
+            padding-left: 200px;
+            color: blue;  
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="slider">
+        <span id="textsec">
+        </span>
+        <p id="text"></p>
+       
+    </div>
+    <div>
+        <button type="button" id="prev">PREV</button>
+        <button type="button" id="next">NEXT</button>
+    </div>
+    <script>
+
+        var slider = document.querySelector(".slider")
+        var btn1 = document.querySelector('#prev');
+        var text = document.querySelector('#text');
+        var btn2 = document.querySelector('#next');
+        var textsec = document.querySelector('#textsec')
+        var position = 0;
+
+        var images = [
+            "ccn4.jpg",
+            "c3.jpg",
+            "ccn8.jpg"
+        ];
+
+        slider.style.backgroundImage = "url(" + images[position] + ")";
+
+        var textPrint = [
+            "CULTURAL DAY",
+            "CHRISTMAS CAROL",
+            "MUSICAL PRESENTATION"
+        ];
+
+        var textNew = [
+            "image 1",
+            "image 2",
+            "image 3"
+
+        ]
+
+        text.innerHTML = textPrint[position];
+        // text.style.animation = "ease in";
+        textsec.innerHTML = textNew[position];
+
+
+        function one() {
+            position++;
+            if (position >= images.length) {
+                position = images.length -1;
+            }
+            slider.style.backgroundImage = "url(" + images[position] + ")";
+            text.innerHTML = textPrint[position];
+            textsec.innerHTML = textNew[position];
+          
+        }
+
+        function two() {
+            position--;
+            if (position <= 0) {
+                position = 0;
+            }
+            slider.style.backgroundImage = "url(" + images[position] + ")";
+            text.innerHTML = textPrint[position];
+            textsec.innerHTML = textNew[position];
+            
+          
+        }
+
+        btn2.onclick = one;
+        btn1.onclick = two;
+
+    </script>
+
+</body>
+
+</html>

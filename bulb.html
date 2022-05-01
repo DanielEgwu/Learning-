@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: auto;
+            margin-top: 30px;
+            /* justify-content: center; */
+        }
+
+        #bulb {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 2px solid;
+            transition-duration: 1s;
+        }
+
+     
+
+
+        button {
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="bulb"></div>
+        <div id="line"></div>
+        <button type="button" id="swit">SWITCH</button>
+    </div>
+
+
+
+    <script>
+        var bulb = document.querySelector("#bulb");
+        var btn = document.querySelector("#swit");
+        var color = [
+            "yellow",
+            "grey"
+        ];
+        var position = 0;
+
+        bulb.style.background = "grey"
+
+       
+            function process() {
+                bulb.style.background = color[position];
+                position++;
+                if(position == color.length){
+                    position = 0;
+                }
+            };
+        
+        btn.onclick = process ;
+
+    </script>
+</body>
+
+</html>

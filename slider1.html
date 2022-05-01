@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            margin-left: 47px;
+            margin-top: 25px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            /* animation-name: fade; */
+            /* animation-duration: 7s; */
+            transition-delay: 0s;
+            opacity: 1;
+            /* display: none; */
+        }
+
+        
+
+        #next {
+            float: right;
+            margin-right: 14px;
+
+        }
+
+        img {
+            margin: 5px;
+          
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div id="image">
+            <img src="" class="image1">
+        </div>
+        <div id="image">
+            <img src="" class="image2">
+        </div>
+        <div id="image">
+            <img src="" class="image3">
+        </div>
+        <div id="image">
+            <img src="" class="image4">
+        </div>
+
+
+    </div>
+    <button type="button" id="prev">PREV</button>
+    <button type="button" id="next">NEXT</button>
+
+
+    <script>
+        var images = document.querySelector("#image2")
+        var slider = document.querySelector(".slider");
+        var prev = document.querySelector("#prev");
+        var next = document.querySelector("#next");
+        var imagePOne = document.querySelector('.image1');
+        var imagePTwo = document.querySelector('.image2');
+        var imagePThree = document.querySelector('.image3');
+        var imagePFour = document.querySelector('.image4');
+
+        var image = [
+            {
+                imageOne: "c7.jpg",
+                imageTwo: "c6.jpg",
+                imageThree: "c4.jpg",
+                imageFour: "c2.jpg"
+            },
+
+            {
+                imageOne: "gc5.jpg",
+                imageTwo: "gc6.jpg",
+                imageThree: "gc8.jpg",
+                imageFour: "gc9.jpg"
+            },
+
+            {
+                imageOne: "gc1.jpg",
+                imageTwo: "gc2.jpg",
+                imageThree: "gc3.jpg",
+                imageFour: "gc4.jpg"
+            }
+        ]
+        position = 0;
+        
+        imagePOne.src = image[position].imageOne;
+        imagePTwo.src = image[position].imageTwo;
+        imagePThree.src = image[position].imageThree;
+        imagePFour.src = image[position].imageFour;
+            
+
+
+        function one() {
+            
+            position++;
+
+            
+            slider.style.opacity =parseInt(imt)
+            
+            if (position == image.length) {
+                position = image.length - 1;
+            }
+            imagePOne.src = image[position].imageOne;
+            imagePTwo.src = image[position].imageTwo;
+            imagePThree.src = image[position].imageThree;
+            imagePFour.src = image[position].imageFour;
+            
+            
+            
+        }
+
+
+
+        function two() {
+            position--;
+            if (position <= 0) {
+                position = 0;
+            }
+            imagePOne.src = image[position].imageOne;
+            imagePTwo.src = image[position].imageTwo;
+            imagePThree.src = image[position].imageThree;
+            imagePFour.src = image[position].imageFour;
+            
+            
+            // console.log(image.length)
+            
+        }
+
+        next.onclick = one;
+        prev.onclick = two;
+    </script>
+</body>
+
+</html>

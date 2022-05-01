@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            margin-left: 47px;
+            margin-top: 25px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+        }
+
+        #next {
+            float: right;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div id="imageone">
+            <img src="c7.jpg">
+        </div>
+        <div id="imagetwo">
+            <img src="c6.jpg">
+        </div>
+        <div id="imagethree">
+            <img src="c4.jpg">
+        </div>
+        <div id="imagefour">
+            <img src="c2.jpg">
+        </div>
+
+
+    </div>
+    <button type="button" id="prev">PREV</button>
+    <button type="button" id="next">NEXT</button>
+
+
+    <script>
+        var imageOne = document.querySelector("#imageone");
+        var imageTwo = document.querySelector("#imagetwo");
+        var imageThree = document.querySelector("#imagethree");
+        var imageFour = document.querySelector("#imagefour");
+        var slider = document.querySelector(".slider");
+        var prev = document.querySelector("#prev");
+        var next = document.querySelector("#next");
+        // position = 4
+        // var imag = [
+        //     {
+        //         // imageOne: "c7.jpg",
+        //         imageTwo: "c6.jpg",
+        //         imageThree: "c4.jpg",
+        //         imageFour: "c2.jpg"
+        //     }
+        // ]
+        // console.log(slider)
+
+        var image1 = [
+
+            "gc1.jpg",
+            "gc2.jpg",
+            "gc3.jpg",
+            "gc4.jpg"
+
+        ];
+
+        var image2 = [
+            {
+                imageOne: "gc5.jpg",
+                imageTwo: "gc6.jpg",
+                imageThree: "gc8.jpg",
+                imageFour: "gc9.jpg"
+            }
+        ];
+
+
+
+
+
+        // for (i = 0; image2 > i; i++) {
+        //     var img =document.createElement('.img')
+        //     img.src = image2[i]
+        //     slider.appendChild(img);
+        // }
+
+       
+        function one() {
+            slider.style.display = "none"
+            for (let i = 0; i < image2.length; i++) {
+    
+            const img = document.createElement("img");
+            img.src = "gc6.jpg"
+            slider.appendChild(img);
+            slider.style.display = "flex"
+
+                 }
+        }
+
+        next.onclick = one;
+
+    </script>
+</body>
+
+</html>
