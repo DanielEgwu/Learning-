@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtraction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <p>
+            Note: Second number is deducted from First
+            number.
+        </p>
+        <form>
+            <a href="ass4.html"><img src="arrow-left.png" width="3%">Back</a>
+            <ul>
+                <li>
+                    <label>
+                        First number
+                    <input type="text" class="first" placeholder="Enter first number">
+                    </label>
+                </li>
+
+                <li>
+                    <label>
+                        Second number
+                    <input type="text" class="second" placeholder="Enter second number">
+                    </label>
+                </li>
+                <li>
+                    <button type="button" class="subtractbtn">Subtract</button>
+                </li>
+            </ul>
+        </form>
+        <p class="display"></p>
+        <a href="ass3.html">Log out</a>
+    </div>
+
+    <script type="text/javascript">
+        var btn = document.querySelector(".subtractbtn");
+       function subtract() {
+           var first = document.querySelector(".first").value;
+           var second = document.querySelector(".second").value;
+           var display = document.querySelector(".display")
+           var result = parseInt(first) - parseInt(second);
+           display.innerHTML = "The answer is " + result;
+       }
+       btn.onclick = subtract;
+   </script>
+</body>
+
+</html>

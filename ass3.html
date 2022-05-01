@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Login {
+            background-color: lightblue;
+            margin: auto;
+            margin-top: 60px;
+            width: 50%;
+            padding-bottom: 30px;
+        }
+
+        form ul li {
+            list-style: none;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .name,
+        .pass {
+            width: 40%;
+            /* border-radius: 3%; */
+            border: unset;
+            padding: 10px;
+            margin: 5px;
+            font-family: open sans;
+            font-size: 20px;
+        }
+
+        .loginbtn {
+            background-color: cadetblue;
+            border: unset;
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        label {
+            margin-right: 3px;
+            font-size: 17px;
+        }
+
+        h2 {
+            text-align: center;
+            padding-top: 15px;
+            font-family: verdana;
+        }
+
+        button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+            font-size: 21px;
+            padding-left: 40px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Login">
+        <h2>user Login</h2>
+        <form>
+            <ul>
+                <li>
+                    <label>
+                        Username
+                        <input type="text" placeholder="Enter username" class="name">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Password
+                        <input type="password" placeholder="Enter password" class="pass">
+                    </label>
+                </li>
+                <li>
+                    <button type="button" class="loginbtn">Log in</button>
+                </li>
+            </ul>
+        </form>
+        <p class="display"></p>
+    </div>
+    <script src="dan.js"></script>
+</body>
+
+</html>

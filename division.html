@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="divide">
+        <p>
+            Note: First number is the dividend <br>and second 
+            number is the divisor.
+        </p>
+        <form>
+            <a href="ass4.html"><img src="arrow-left.png" width="3%">Back</a>
+            <ul>
+                <li>
+                    <label>
+                        First number
+                        <input type="text" class="first" placeholder="Enter first number">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Second number
+                        <input type="text" class="second" placeholder="Enter second number">
+                    </label>
+                </li>
+                <li>
+                    <button type="button" class="dividebtn">Divide</button>
+                </li>
+            </ul>
+        </form>
+        <p class="display"></p>
+        <a href="ass3.html">Log out</a>
+    </div>
+
+    <script type="text/javascript">
+        var btn = document.querySelector(".dividebtn");
+        function division() {
+            var first = document.querySelector(".first").value;
+            var second = document.querySelector(".second").value;
+            var display = document.querySelector(".display")
+            var result = first / second;
+            display.innerHTML = "The answer is " + result;
+        }
+        btn.onclick = division;
+    </script>
+</body>
+
+</html>

@@ -1,128 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        div {
-            background: black;
-            border: 8px solid grey;
-            margin: auto;
-            width: 230px;
-            padding: 5px;
-            margin-top: 50px;
-        }
-
-        .grey {
-            border-radius: 50%;
-            background: grey;
-            width: 200px;
-            height: 200px;
-            display: grid;
-            margin-left: 20px;
-        }
-
-        .space {
-            color: white;
-            font-size: 80px;
-            text-align: center;
-            padding-top: 40px;
-        }
-
-        hr {
-            width: 220px;
-            /* height: 1px; */
-            padding-right: 10px;
-            background: grey;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+    </head>
 
 <body>
-    <div>
-
-        <p id="red" class="grey">
-            <span class="space"></span>
-        </p>
-        <hr>
-        <p id="yellow" class="grey"></p>
-        <hr>
-        <p id="green" class="grey"><span class="space"></span></p>
-
-    </div>
-
-
-
-    <script>
-
-        var redLight = document.querySelector("#red");
-        var yellowLight = document.querySelector("#yellow");
-        var greenLight = document.querySelector("#green");
-        redLight.style.background = "red";
-        var wait = 3;
-        var counter = 10;
-        setInterval(function () {
-            if (redLight.style.background == "red") {
-                if (wait <= 0) {
-                    showCounter(red, counter);
-                    if (counter <= 0) {
-                        redLight.style.background = "grey";
-                        yellowLight.style.background = "yellow";
-                        wait = 3;
-                        removeCounter(red);
-                    }
-                    counter--;
-                }
-                wait--;
-            }
-
-            if (yellowLight.style.background == "yellow") {
-                if (wait <= 0) {
-                    yellowLight.style.background = "grey";
-                    greenLight.style.background = "green";
-                    wait = 4;
-                    counter = 10;
-
-                }
-                wait--;
-            }
-
-            if (greenLight.style.background == "green") {
-                if (wait <= 0) {
-                    showCounter(green, counter);
-                    if (counter <= 0) {
-                        greenLight.style.background = "grey";
-                        redLight.style.background = "red";
-                        counter = 10;
-                        wait = 3;
-                        removeCounter(green);
-                    }
-                    counter--;
-                }
-                wait--;
-            }
-        }, 1000);
-
-        function showCounter(element, counter) {
-            element.getElementsByClassName('space')[0].innerHTML = counter;
-
-        }
-
-        function removeCounter(element) {
-            console.log(element.getElementsByClassName("space")[0])
-            element.getElementsByClassName('space')[0].innerHTML = "";
-        }
-
-
-
-
-
-
-
-    </script>
+    <h2>welcome</h2>
+    <h1>create an application that allows the user to login with username and password
+    </h1>
+    <h2>
+        array
+        after user has logged in he should be able to carry out arithmetic the four operations
+    </h2>
 </body>
 
 </html>

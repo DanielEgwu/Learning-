@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter first number" class="fn">
+    <input type="text" placeholder="enter second number" class="sn">
+    <input type="text" placeholder="enter third number" class="tn">
+    <p class="result"></p>
+    <button class="btn">click</button><br>
+
+
+
+    <input type="text" placeholder="enter first number" class="frn">
+    <input type="text" placeholder="enter second number" class="scn">
+    <input type="text" placeholder="enter third number" class="thn">
+    <input type="text" placeholder="enter fourth number" class="fun">
+    <input type="text" placeholder="enter fifth number" class="fin">
+    <p class="apara"></p>
+    <button class="abtn">click me</button>
+
+   <br> <input type="text" placeholder="enter score in english" class="eng">
+    <input type="text" placeholder="enter score in maths" class="mat">
+    <input type="text" placeholder="enter score in Biology" class="bio">
+    <input type="text" placeholder="enter score in Physics " class="phy">
+    <input type="text" placeholder="enter score in Chemistry" class="che">
+    <p class="grade2"></p>
+    <p class="grade1"></p>
+     <p class="grade5"></p>
+     <p class="grade3"></p>
+     <p class="grade4"></p>
+    <br>   <button class="gradebtn">click me</button>
+
+    <form>
+        <input type="text" placeholder="enter your name" class="name">
+        <p class="display"></p>
+        <button type="button" class="namebtn">click here</button>
+    </form>
+    <script>
+        var namebutton = document.querySelector(".namebtn");
+        // var input = document.querySelector(".name").value;
+        var displayfield = document.querySelector(".display");
+        var students =["dan", "mike", "henry"];
+        namebutton.onclick = function(){
+            var input = document.querySelector(".name").value;
+            if (input == students[0] || input == students[1] || input == students[2]){
+                console.log("goat");
+                displayfield.innerHTML = "display record retrieved successfully ";
+            } else{
+                displayfield.innerHTML = "we do not have your record";
+            }
+        }
+
+
+        var first = document.querySelector(".fn") ;
+        var second =document.querySelector(".sn");
+        var third =document.querySelector(".tn");
+        var sum = parseInt(first.value)*parseInt(second.value)*parseInt(third.value);
+        var para =document.querySelector(".result");
+        var button =document.querySelector(".btn");
+        button.onclick = function(){
+            para.innerHTML=sum
+        }
+    
+
+        var fiNum = document.querySelector(".frn");
+        var seNum = document.querySelector(".scn");
+        var thiNum = document.querySelector(".thn");
+        var forNum = document.querySelector(".fun");
+        var fiveNum = document.querySelector(".fin");
+        var mybtn = document.querySelector(".abtn");
+        var mypara = document.querySelector(".apara");
+        var average = (parseInt(fiNum.value)+ parseInt(seNum.value)+ parseInt(thiNum.value)+ parseInt(forNum.value)+ parseInt(fiveNum.value))/5;
+        mybtn.onclick = function(){
+            mypara.innerHTML =average
+        }
+        
+        var first = document.querySelector(".eng").value;
+        var second = document.querySelector(".mat").value;
+        var third = document.querySelector(".bio").value;
+        var fourth = document.querySelector(".phy").value;
+        var fifth = document.querySelector(".che").value;
+        var gpara = document.querySelector(".grade5");
+        var gtn = document.querySelector(".gradebtn");
+        var para1 = document.querySelector(".grade1");
+        var para2 = document.querySelector(".grade2");
+        var para3 = document.querySelector(".grade3");
+        var para4 = document.querySelector(".grade4")
+        gtn.onclick =function(){
+         if (first<=39){
+            para1.innerHTML=(" english  "+ first + "  grade F");
+         }
+             else if((first>=40) &&(first<=49)){
+                para1.innerHTML=("english  "+ first + "  grade E");
+        
+            }
+            else if((first>=50) &&(first<=54)){
+                para1.innerHTML= (" english  "+ first + "  grade D");
+            }
+            else if((first>=55) &&(first<=64)){
+                para1.innerHTML=(" english  "+ first + "  grade C");
+            }
+            else if((first>=65) &&(first<=79)){
+                para1.innerHTML=(" english  "+ first + "  grade B");
+            }
+            else {
+                para1.innerHTML=(" english  "+ first + "  grade A");
+            }
+            
+            
+            if (second<=39){
+            gpara.innerHTML=(" maths  "+ second+ "  grade F");
+             }
+            else if((second>=40) &&(second<=49)){
+                gpara.innerHTML=(" maths "+ second+ "  grade E");
+            }
+           else if((second>=50) &&(second<=54)){
+            gpara.innerHTML=(" maths "+ second + "  grade D");
+            }
+            else if((second>=55) &&(second<=64)){
+                gpara.innerHTML=(" maths    "+second+ "  grade C");
+            }
+           else if((second>=65) &&(second<=79)){
+            gpara.innerHTML=(" maths  "+ second + "  grade B");
+            }
+           else {
+            gpara.innerHTML=(" maths  "+ second + "  grade A");
+            } 
+
+            if (third<=39){
+            para2.innerHTML=(" Biology  "+ third+ "  grade F");
+             }
+            else if((third>=40) &&(third<=49)){
+                para2.innerHTML=(" Biology   "+ third+ "  grade E");
+            }
+           else if((third>=50) &&(third<=54)){
+            para2.innerHTML=(" Biology   "+ third + "  grade D");
+            }
+            else if((third>=55) &&(third<=64)){
+                para2.innerHTML=(" Biology   "+third+ "  grade C");
+            }
+           else if((third>=65) &&(third<=79)){
+            para2.innerHTML=(" Biology    "+ third + "  grade B");
+            }
+           else {
+            para2.innerHTML=(" Biology   "+ third + "  grade A");
+            }  
+            
+            if (fourth<=39){
+            para3.innerHTML=(" Physics "+ fourth+ "  grade F");
+             }
+            else if((fourth>=40) &&(fourth<=49)){
+                para3.innerHTML=("physics   "+ fourth+ "  grade E");
+            }
+           else if((fourth>=50) &&(fourth<=54)){
+            para3.innerHTML=(" physics  "+ fourth + "  grade D");
+            }
+            else if((fourth>=55) &&(fourth<=64)){
+                para3.innerHTML=(" physics   "+fourth+ "  grade C");
+            }
+           else if((fourth>=65) &&(fourth<=79)){
+            para3.innerHTML=(" physics   "+ fourth+ "  grade B");
+            }
+           else {
+            para3.innerHTML=(" physics  "+ fourth + "  grade A");
+            }  
+
+         
+            if (fifth<=39){
+            para4.innerHTML=(" Chemistry "+ fifth+ "  grade F");
+             }
+            else if((fifth>=40) &&(fifth<=49)){
+                para4.innerHTML=(" Chemistry  "+ fifth+ "  grade E");
+            }
+           else if((fifth>=50) &&(fifth<=54)){
+            para4.innerHTML=(" Chemistry   "+ fifth + "  grade D");
+            }
+            else if((fifth>=55) &&(fifth<=64)){
+                para4.innerHTML=(" Chemistry   "+fifth+ "  grade C");
+            }
+           else if((fifth>=65) &&(fifth<=79)){
+            para4.innerHTML=(" Chemistry   "+ fifth+ "  grade B");
+            }
+           else {
+            para4.innerHTML=(" Chemistry   "+ fifth + "  grade A");
+            } 
+            
+        }
+        
+    </script>
+</body>
+</html>

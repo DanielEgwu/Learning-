@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <input type="text" class="input">
+        <button class="mybtn">click here</button>
+
+        <p class="display">
+
+        </p>
+    
+    <div>
+        
+            <input type="text" class="input2">
+            <p class="para"></p>
+            <button class="mybt">click</button>
+      
+
+    </div>
+    <div>
+       
+            <input type="text" placeholder="input first number" id="fn">
+            <input type="text" placeholder="input second number" class="sn"><br>
+            <button class="numbtn">click</button>
+            <p class="nump"> sum</p>
+        
+    </div>
+
+    <script type="text/javascript">
+        var inputField = document.querySelector('.input');
+        var btnField = document.querySelector('.mybtn');
+        var displayField = document.querySelector('.display');
+        btnField.onclick = function(){
+            displayField.innerHTML = inputField.value;
+        }
+
+        var name = document.querySelector('.input2');
+        var displaySam = document.querySelector('.para');
+        var btn = document.querySelector('.mybt');
+        btn.onclick = function () {
+            displaySam.innerHTML = "welcome to my website " + name.value;
+        }
+
+       var firstNum = document.getElementById("fn");
+       var secondNum = document.querySelector('.sn');
+        var numbutton = document.querySelector('.numbtn');
+        var sum = parseInt(firstNum.value) + parseInt(secondNum.value);
+       var numpara = document.querySelector('.nump');
+            numbutton.onclick = function(){
+                console.log(firstNum);
+                numpara.innerHTML = sum;
+            }
+    </script>
+</body>
+
+
+</html>
