@@ -1,110 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>BetterSax</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .login-page {
-            background-color: aquamarine;
-            margin: auto;
-            width: 40%;
-            margin-top: 50px;
-            padding: 20px;
-            text-align: center;
-        }
+    </head>
+    <body>
+        
+        <div style=" background: lightblue;">
+            <h2 style="text-align:center;font-size: 80px; font-style: oblique; color: dimgray;">BetterSax</h2>
+            <a href="daniel.html"  style=" color:darkgoldenrod; font-family:Courier new;">Home</a>
+            <a href="about.html" style=" color:darkgoldenrod; font-family:Courier new;" >About</a>
+            <a href="services.html"  style=" color:darkgoldenrod; font-family:Courier new;">Services</a>
+            <a href="contact.html"  style=" color:darkgoldenrod; font-family:Courier new;" >Contact</a>
+        </div>
 
-        form ul {
-            list-style: none;
-        }
+        <div>
+          <h2 style="color: blue;font-style:italic;background: forestgreen;">Saxopohone</h2>
+          <img src="ssax.jpg" >
+          <br>
+          <br>
+          <img src="man.jpg">
+          <p>The saxophone is a type of single-reed woodwind instrument with a conical body, usually made of brass.
+               As with all single-reed instruments, sound is produced when a reed on a mouthpiece
+                vibrates to produce a sound wave inside the instrument's body. The pitch is controlled by opening 
+                and closing holes in the body to change the effective length of the tube. The holes are closed by
+                 leather pads attached to keys operated by the player. Saxophones are made in various sizes and
+                  are almost always treated as transposing instruments. Saxophone players are called saxophonists.</p>
 
-        form ul li {
-            padding: 10px;
-        }
-
-        input {
-            border: none;
-            padding: 15px;
-        }
-
-        .loginbtn {
-            background-color: lightskyblue;
-            border: unset;
-            padding: 10px;
-        }
-
-        .loginbtn:hover {
-            background-color: darkblue;
-            color: white;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="login-page">
-        <form>
-            <ul>
-                <li>
-                    <label>username
-                        <input type="text" class="name" placeholder="Enter your name">
-                    </label>
-                </li>
-                <li>
-                    <label>Password
-                        <input type="password" class="pass" placeholder="Enter your password">
-                    </label>
-                </li>
-                <li>
-                    <button type="button" class="loginbtn">submit</button>
-                </li>
-            </ul>
-            <p class="display"></p>
-        </form>
-    </div>
-
-(
-    <script type="text/javascript">
-        var btn = document.querySelector('.loginbtn');
-        function login() {
-            var name = document.querySelector('.name').value;
-            var password = document.querySelector('.pass').value;
-            var display = document.querySelector('.display');
-            var given = [
-                {
-                    name: "tobi",
-                    password: "good"
-                },
-                {
-                    name: "frank",
-                    password: "bad"
-                }
-            ];
-            for (i=0; i< given.length; i++){
-                if (name == given[i].name && password == given[i].password) {
-                    location.href = "ass4.html";
-                    break;
-                }
-                else if (name == given[i].name && password !== given[i].password) {
-                    var sad = "invalid password";
-                   
-                    break;
-                }
-
-                else if (name.length == 0 || password.length == 0) {
-                    var sad = "please fill up the required fields!";
-                    break;
-                }
-                else if (name !== given[i].name) {
-                    var sad = "No matching account found for username!";
-                }
-                
-            }
-            display.innerHTML = sad;
-        }
-        btn.onclick = login;
-    </script>
-</body>
-
+             <P>  The saxophone is used in a wide range of musical styles including classical music
+                (such as concert bands, chamber music, solo repertoire, and occasionally orchestras),
+                military bands, marching bands, jazz (such as big bands and jazz combos), and contemporary music. 
+                The saxophone is also used as a solo and melody instrument or as a member of a horn section in some
+                styles of rock and roll and popular music.</p>
+             </div>
+             </body>
+            
+             
+         <div style="text-align: center;" >
+        <p>Copyright &copy; 2022. All Rights Resevered. My Company Limited</p>
+        </div>
+    </body>
 </html>
